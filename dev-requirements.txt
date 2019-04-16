@@ -3,7 +3,7 @@ bandit
 doc8
 docutils
 flake8
-mock <2; python_version < '3'
+mock
 pygments
 pylint >=2; python_version >= '3'
 pylint <2; python_version < '3'

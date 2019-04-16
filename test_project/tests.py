@@ -8,10 +8,7 @@ from django.contrib.auth import get_user_model
 from django.core.management import call_command, CommandError
 from django.test import TestCase
 
-try:
-    from unittest.mock import MagicMock
-except ImportError:
-    from mock import MagicMock
+from mock import MagicMock
 
 patch = MagicMock().patch
 
