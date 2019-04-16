@@ -20,7 +20,7 @@ class TestDjangoCreateuser(TestCase):
     def test_createuser_username_password_email(self):
         n = next(self.n)
         out = io.StringIO() if sys.version_info >= (3, 0) else io.BytesIO()
-        if django.VERSION >= (2, 0):
+        if django.VERSION >= (2, 1):
             call_command('createuser', 'user%d' % n, password='password%d' % n, email='email%d' % n, verbosity=2, stdout=out)
         else:
             call_command('createuser', 'user%d' % n, '--password', 'password%d' % n, '--email', 'email%d' % n, verbosity=2, stdout=out)
@@ -38,7 +38,7 @@ class TestDjangoCreateuser(TestCase):
         n = next(self.n)
         try:
             out = io.StringIO() if sys.version_info >= (3, 0) else io.BytesIO()
-            if django.VERSION >= (2, 0):
+            if django.VERSION >= (2, 1):
                 call_command('createuser', 'user%d' % n, password='password%d' % n, verbosity=2, stdout=out)
             else:
                 call_command('createuser', 'user%d' % n, '--password', 'password%d' % n, verbosity=2, stdout=out)
@@ -53,7 +53,7 @@ class TestDjangoCreateuser(TestCase):
     def test_createuser_first_name(self):
         n = next(self.n)
         out = io.StringIO() if sys.version_info >= (3, 0) else io.BytesIO()
-        if django.VERSION >= (2, 0):
+        if django.VERSION >= (2, 1):
             call_command('createuser', 'user%d' % n, password='password%d' % n, email='email%d' % n, first_name='first_name%d' % n, verbosity=2, stdout=out)
         else:
             call_command('createuser', 'user%d' % n, '--password', 'password%d' % n, '--email', 'email%d' % n, '--first_name', 'first_name%d' % n, verbosity=2, stdout=out)
@@ -66,7 +66,7 @@ class TestDjangoCreateuser(TestCase):
     def test_createuser_last_name(self):
         n = next(self.n)
         out = io.StringIO() if sys.version_info >= (3, 0) else io.BytesIO()
-        if django.VERSION >= (2, 0):
+        if django.VERSION >= (2, 1):
             call_command('createuser', 'user%d' % n, password='password%d' % n, email='email%d' % n, last_name='last_name%d' % n, verbosity=2, stdout=out)
         else:
             call_command('createuser', 'user%d' % n, '--password', 'password%d' % n, '--email', 'email%d' % n, '--last_name', 'last_name%d' % n, verbosity=2, stdout=out)
@@ -79,7 +79,7 @@ class TestDjangoCreateuser(TestCase):
     def test_createuser_is_staff(self):
         n = next(self.n)
         out = io.StringIO() if sys.version_info >= (3, 0) else io.BytesIO()
-        if django.VERSION >= (2, 0):
+        if django.VERSION >= (2, 1):
             call_command('createuser', 'user%d' % n, password='password%d' % n, email='email%d' % n, is_staff=True, verbosity=2, stdout=out)
         else:
             call_command('createuser', 'user%d' % n, '--password', 'password%d' % n, '--email', 'email%d' % n, '--is-staff', verbosity=2, stdout=out)
@@ -92,7 +92,7 @@ class TestDjangoCreateuser(TestCase):
     def test_createuser_is_superuser(self):
         n = next(self.n)
         out = io.StringIO() if sys.version_info >= (3, 0) else io.BytesIO()
-        if django.VERSION >= (2, 0):
+        if django.VERSION >= (2, 1):
             call_command('createuser', 'user%d' % n, password='password%d' % n, email='email%d' % n, is_superuser=True, verbosity=2, stdout=out)
         else:
             call_command('createuser', 'user%d' % n, '--password', 'password%d' % n, '--email', 'email%d' % n, '--is-superuser', verbosity=2, stdout=out)
