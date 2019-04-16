@@ -15,6 +15,7 @@ except ImportError:
 
 patch = MagicMock().patch
 
+
 class TestDjangoCreateuser(TestCase):
 
     n = itertools.count()
@@ -48,8 +49,8 @@ class TestDjangoCreateuser(TestCase):
         except CommandError as e:
             error = e.args[0]
         self.assertIn(error, [
-            'Error: the following arguments are required: --email', # 2.x
-            'Error: argument --email is required', # 1.x
+            'Error: the following arguments are required: --email',  # 2.x
+            'Error: argument --email is required',  # 1.x
         ])
 
     def test_createuser_first_name(self):
