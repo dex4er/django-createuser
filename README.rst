@@ -70,9 +70,9 @@ optional arguments:
                         Verbosity level; 0=minimal output, 1=normal output,
                         2=verbose output, 3=very verbose output
   --settings SETTINGS   The Python path to a settings module, e.g.
-                        ``"myproject.settings.main"``. If this isn't provided, the
-                        DJANGO_SETTINGS_MODULE environment variable will be
-                        used.
+                        ``"myproject.settings.main"``. If this isn't provided,
+                        the ``DJANGO_SETTINGS_MODULE`` environment variable
+                        will be used.
   --pythonpath PYTHONPATH
                         A directory to add to the Python path, e.g.
                         ``"/home/djangoprojects/myproject"``.
