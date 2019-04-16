@@ -4,13 +4,13 @@ language: python
 
 matrix:
   include:
-    - python: "3.7"
+    - python: "3.7.3"
       env: DJANGO_VERSION=2.2 TEST_LINT=yes
 
-    - python: "3.7"
+    - python: "3.7.3"
       env: DJANGO_VERSION=2.1
 
-    - python: "3.7"
+    - python: "3.7.3"
       env: DJANGO_VERSION=2.0
 
     - python: "3.6"
